@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
+UPLOAD_FOLDER = 'uploads/'
 
 @app.route('/')
 def upload():
@@ -16,3 +17,4 @@ def upload_file():
 		
 if __name__ == '__main__':
    app.run(debug = False)
+   app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

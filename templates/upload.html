@@ -3,19 +3,22 @@
   <title>Upload - pigeonvideo</title>
   </head>
   <style>
-  input[type=file] {
-    border: 2px solid red;
-    border-radius: 4px;
-  }
+    input[type=file] {
+      border: 2px solid red;
+      border-radius: 4px;
+    }
+    body {font-family: Arial, Helvetica, sans-serif;}
   </style>
   <body>
+    <center>
+    <h1>
+      hello! upload a video to get started!
+    </h1>
       <form action = "/uploader" method = "POST" 
          enctype = "multipart/form-data">
-        <label class="custom-file-upload">
          <input type = "file" name = "file" />
-          Upload video!
-        </label>
          <input type = "submit"/>
-      </form>   
+      </form>
+    </center>
    </body>
 </html>
