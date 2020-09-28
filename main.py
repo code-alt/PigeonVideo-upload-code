@@ -7,6 +7,11 @@ ALLOWED_EXTENSIONS = {'mp4', 'mov'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
+@app.errorhandler(413)
+def request_entity_too_large(error):
+    return 'Your video is too big! PigeonVideo can only handle a video of MP4 or MOV thats 16mb or less', 413
 
 def allowed_file(filename):
     return '.' in filename and \
