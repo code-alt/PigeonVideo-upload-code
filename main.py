@@ -31,7 +31,6 @@ def upload_file():
             return redirect(url_for('upload_file',
                                     filename=filename))
     return render_template("upload.html")
-#hot ?
 if __name__ == '__main__':
    app.run(debug = False)
-   app.secret_key = 'pigeonvideoisawesome123'
+   app.secret_key = 'zxcCoo9P'
